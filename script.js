@@ -29,6 +29,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // When the guess is right
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🤗 Correct Guess'
+    document.querySelector('.number').textContent = guess;
 
     // to change CSS or style of elemnts
     // Remember to put the values of styles like 30 rem in quotes i.e like strings or it won't work
@@ -42,10 +43,11 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.highscore').textContent = highScore;
     }
 
-    // When the guess is high
-  } else if (guess > secretNumber) {
+
+    // when guess is wrong
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Your guess is high';
+      document.querySelector('.message').textContent = guess > secretNumber ? '📈 Your guess is high' : '📉 Your guess is low';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -53,19 +55,6 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
       document.querySelector('body').style.backgroundColor = '#FF0000'
     }
-
-    // When the guess is low
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📉 Your guess is low'
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = ' 😞 You LOST!!';
-      document.querySelector('.score').textContent = 0;
-      document.querySelector('body').style.backgroundColor = '#FF0000'
-    }
-
   }
 }
 )
