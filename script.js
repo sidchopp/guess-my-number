@@ -9,8 +9,10 @@
 
 
 let secretNumber = Math.trunc(Math.random() * 20 + 1);
-//console.log(Math.trunc(Math.random() * 20 + 1));
+//console.log(secretNumber);
+
 let score = 20;
+let highScore = 0;
 document.querySelector('.number').textContent = '?';
 
 // we are adding an event listner to the Check! button
@@ -33,6 +35,12 @@ document.querySelector('.check').addEventListener('click', function () {
     // if the style has two words, combine them using camel case notation
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+
+    // for highest score to remain max untill we refresh the app
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+    }
 
     // When the guess is high
   } else if (guess > secretNumber) {
@@ -69,7 +77,6 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.message').textContent = ' Start guessing...';
   document.querySelector('.score').textContent = score;
   document.querySelector('.number').textContent = '?';
-  document.querySelector('.highscore').textContent = 0;
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
