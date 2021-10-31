@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: "Cormorant", serif;
+  font-family: "Comfortaa", cursive;
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
@@ -24,6 +24,10 @@ header {
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #eee;
+}
+
+.heading {
+  font-size: 2.1rem;
 }
 
 main {
@@ -122,10 +126,17 @@ h1 {
 }
 
 .message {
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
   height: 3rem;
+  font-size: 1.5rem;
 }
 
 .label-score {
   margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.label-highscore {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
