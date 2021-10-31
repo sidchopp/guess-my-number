@@ -11,7 +11,7 @@
 let secretNumber = Math.trunc(Math.random() * 20 + 1);
 //console.log(secretNumber);
 
-let score = 20;
+let score = 5;
 let highScore = 0;
 document.querySelector('.number').textContent = '?';
 
@@ -61,7 +61,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
 // for try again button
 document.querySelector('.again').addEventListener('click', function () {
-  score = 20;
+  score = 5;
   secretNumber = Math.trunc(Math.random() * 20 + 1);
   document.querySelector('.message').textContent = ' Start guessing...';
   document.querySelector('.score').textContent = score;
