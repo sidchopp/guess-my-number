@@ -13,7 +13,7 @@ let secretNumber = Math.trunc(Math.random() * 20 + 1);
 
 let score = 5;
 let highScore = 0;
-document.querySelector('.number').textContent = '?';
+document.querySelector('.number').textContent = '';
 
 // we are adding an event listner to the Check! button
 // the 1st arg is what event we want to listen and 
@@ -34,7 +34,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // to change CSS or style of elemnts
     // Remember to put the values of styles like 30 rem in quotes i.e like strings or it won't work
     // if the style has two words, combine them using camel case notation
-    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('body').style.backgroundImage = "url('https://images.unsplash.com/photo-1525439782176-7d7c4d6ff7f5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80')"
     document.querySelector('.number').style.width = '3rem';
 
     // for highest score to remain max untill we refresh the app
@@ -53,7 +53,7 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       document.querySelector('.message').textContent = ' 😞 You LOST!!';
       document.querySelector('.score').textContent = 0;
-      document.querySelector('body').style.backgroundColor = '#FF0000'
+      document.querySelector('body').style.backgroundImage = "url('https://images.unsplash.com/photo-1604948501466-4e9c339b9c24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80')"
     }
   }
 }
@@ -65,9 +65,9 @@ document.querySelector('.again').addEventListener('click', function () {
   secretNumber = Math.trunc(Math.random() * 20 + 1);
   document.querySelector('.message').textContent = ' Start guessing...';
   document.querySelector('.score').textContent = score;
-  document.querySelector('.number').textContent = '?';
+  document.querySelector('.number').textContent = '';
   document.querySelector('.guess').value = '';
-  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('body').style.backgroundImage = "url('https://images.unsplash.com/photo-1606778303039-9fc1488b1d8a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80')"
   document.querySelector('.number').style.width = '15rem';
 })
 
