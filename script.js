@@ -35,7 +35,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // Remember to put the values of styles like 30 rem in quotes i.e like strings or it won't work
     // if the style has two words, combine them using camel case notation
     document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.number').style.width = '3rem';
 
     // for highest score to remain max untill we refresh the app
     if (score > highScore) {
